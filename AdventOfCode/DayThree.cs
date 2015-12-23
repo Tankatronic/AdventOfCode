@@ -1,11 +1,15 @@
-﻿namespace AdventOfCode
+﻿using System.IO;
+
+namespace AdventOfCode
 {
-    public class DayThree
+    public class DayThree : IDayProblem
     {
-        public static int SolvePartOne(string input)
+        public int SolvePartOne(string input)
         {
+            string directionsInput = File.ReadAllText(input);
+
             int result = 0;
-            char[] directions = input.ToCharArray();
+            char[] directions = directionsInput.ToCharArray();
             int[,] houses = new int[directions.Length * 2, directions.Length * 2]; // make sure we don't move out of bounds
 
             int x, y;
@@ -42,10 +46,12 @@
             return result;
         }
 
-        public static int SolvePartTwo(string input)
+        public int SolvePartTwo(string input)
         {
+            string directionsInput = File.ReadAllText(input);
+
             int result = 0;
-            char[] directions = input.ToCharArray();
+            char[] directions = directionsInput.ToCharArray();
             int[,] houses = new int[directions.Length * 2, directions.Length * 2]; // make sure we don't move out of bounds
 
             int x, y, a, b;

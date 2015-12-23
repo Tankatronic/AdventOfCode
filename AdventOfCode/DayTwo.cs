@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace AdventOfCode
 {
-    public class DayTwo
+    public class DayTwo : IDayProblem
     {
-        public static int SolvePartOne(string[] dimensionSet)
+        public int SolvePartOne(string input)
         {
+            string[] dimensionSet = File.ReadAllLines(input);
             int totalArea = 0;
             foreach(var dimensions in dimensionSet)
             {
@@ -25,8 +27,10 @@ namespace AdventOfCode
             return totalArea;
         }
 
-        public static int SolvePartTwo(string[] dimensionSet)
+        public int SolvePartTwo(string input)
         {
+            string[] dimensionSet = File.ReadAllLines(input);
+
             int totalLength = 0;
 
             foreach (var dimensions in dimensionSet)

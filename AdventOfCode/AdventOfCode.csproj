@@ -43,9 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DayFactory.cs" />
+    <Compile Include="DayFive.cs" />
+    <Compile Include="DayFour.cs" />
     <Compile Include="DayOne.cs" />
     <Compile Include="DayThree.cs" />
     <Compile Include="DayTwo.cs" />
+    <Compile Include="IDayProblem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

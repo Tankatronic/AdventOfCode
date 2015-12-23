@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AdventOfCode
 {
-    public class DayOne
+    public class DayOne : IDayProblem
     {
-        public static int SolvePartOne(string input)
+        public int SolvePartOne(string input)
         {
             int floor = 0;
             char[] parenInput = File.ReadAllText(input).ToCharArray();
@@ -25,7 +25,7 @@ namespace AdventOfCode
             return floor;
         }
 
-        public static int SolvePartTwo(string input)
+        public int SolvePartTwo(string input)
         {
             int floor = 0;
             char[] parenInput = File.ReadAllText(input).ToCharArray();
